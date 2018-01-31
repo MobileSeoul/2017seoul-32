@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.kakao.seoul_app.DetailActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView android:tag="sv_container"
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                    android:backgroundTint="#00A9DC"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/linearlayout1"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below = "@+id/toolbar"
+                    android:background="#FFFFFF">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:id="@+id/title">
+
+                        <TextView
+                            android:id="@+id/blank"
+                            android:layout_width="300dp"
+                            android:layout_height="10dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/Shortname"
+                            android:layout_width="300dp"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/blank"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left"
+                            android:text="강남구 신사동"
+                            android:textColor="#777777"
+                            android:textSize="12dp"
+
+                            />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/Shortname">
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_width="300dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="left"
+                                android:textSize="15dp"
+                                android:textColor="#000000"/>
+
+                            <ImageButton
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/call"
+                                android:layout_toRightOf="@+id/name"
+                                android:layout_marginLeft="10dp"
+                                android:adjustViewBounds="true"
+                                android:id="@+id/call"
+                                android:onClick="Call"
+                                android:background="#FFFFFF"
+                                android:scaleType="centerInside"
+                                />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <fragment android:tag="fragment_map"
+                        android:id="@+id/map"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        class="com.example.kakao.seoul_app.MapInFragment"
+                        android:layout_marginTop="10dp"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/map"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text = "편의정보"
+                            android:textColor="#000000"
+                            android:layout_margin="3dp"
+                            android:textSize="14dp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp">
+
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:text="주소"
+                            android:textSize="12dp"
+                            android:layout_margin="3dp"
+                            android:id="@+id/address_title"
+
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_margin="3dp"
+                            android:layout_toRightOf="@+id/address_title"
+                            android:gravity="right"
+                            android:textColor="#000000"
+                            android:id="@+id/address"
+
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp">
+
+                        >
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:text="거리"
+                            android:textSize="12dp"
+                            android:layout_margin="3dp"
+                            android:id="@+id/address_distance"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_margin="3dp"
+                            android:layout_toRightOf="@+id/address_distance"
+                            android:gravity="right"
+                            android:textColor="#000000"
+                            android:id="@+id/distance"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="20dp"
+                            android:text="대여대상"
+                            android:textSize="12dp"
+                            android:layout_margin="3dp"
+                            android:id="@+id/target_title"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_margin="3dp"
+                            android:layout_toRightOf="@+id/target_title"
+                            android:gravity="right"
+                            android:textColor="#000000"
+                            android:id="@+id/target"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="20dp"
+                            android:text="운영시간"
+                            android:textSize="12dp"
+                            android:layout_margin="3dp"
+                            android:id="@+id/title_time"
+
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_margin="3dp"
+                            android:layout_toRightOf="@+id/title_time"
+                            android:gravity="right"
+                            android:textColor="#000000"
+                            android:id="@+id/time"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:text="대여비"
+                            android:textSize="12dp"
+                            android:layout_margin="3dp"
+                            android:id="@+id/title_cost"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_margin="3dp"
+                            android:layout_toRightOf="@+id/title_cost"
+                            android:gravity="right"
+                            android:textColor="#000000"
+                            android:id="@+id/cost"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below = "@+id/cost">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="20dp"
+                            android:text="공구보유현황"
+                            android:textSize="12dp"
+                            android:layout_margin="3dp"
+                            android:id="@+id/title_status"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_margin="3dp"
+                            android:layout_toRightOf="@+id/title_status"
+                            android:gravity="right"
+                            android:textColor="#000000"
+                            android:id="@+id/status"
+                            />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer"/>
+
+</android.support.v4.widget.DrawerLayout>

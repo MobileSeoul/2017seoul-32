@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">공이공구</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_done">완료</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="drawer_header_text">0209 공이공구</string>
+    <string name="drawer_header_sub">서울시 공구도서관</string>
+    <string name="nav_item_home">공이공구 Home</string>
+    <string name="nav_item_favorite">공이공구 Notification</string>
+    <string name="nav_item_direction">공이공구 Direction</string>
+</resources>
